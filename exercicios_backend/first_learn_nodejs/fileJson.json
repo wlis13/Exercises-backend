@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "CREATE DATABASE",
+    "util": "criar banco de dados",
+    "program": "mysql",
+    "sintaxeEx": "CREATE DATABASE Nome_data_base;"
+  },
+  {
+    "id": 2,
+    "name": "CREATE TABLE",
+    "util": "criat tabelas",
+    "program": "mysql",
+    "sintaxeEx": "CREATE TABLE Name_table();"
+  },
+  {
+    "id": 3,
+    "name": "INSER INTO",
+    "util": "inserir valor em tabelas.",
+    "program": "mysql",
+    "sintaxeEx": "INSERT INTO Nome_da_tabela(Nome_da_coluna)VALUES(valor_a_ser_inserido)"
+  }
+]

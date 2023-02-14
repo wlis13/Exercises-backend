@@ -1,0 +1,109 @@
+res.json({ message: 'Olá Mundo!' });
+res.send('<h1>Olá Mundo!</h1>');
+res.redirect('https://www.betrybe.com/');
+res.render('index.html');
+res.end();
+
+
+{
+  "name": "soccer_team_menager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
+  },
+  "keywords": [],
+  "author": "Trybe-teach",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17"
+  },
+  "devDependencies": {
+    "eslint": "6.8",
+    "eslint-config-trybe-backend": "1.0",
+    "nodemon": "2.0"
+  }
+}
+
+.eslintignore: 
+node_modules
+
+.eslintrc.json:
+{
+  "env": {
+    "es2020": "true"
+  },
+  "extends": "trybe-backend",
+  "rules": {
+    "sonarjs/no-duplicate-strings": ["error", 5]
+  }
+}
+=====================================================================================================
+                       CÓDIGOS DOS ARQUIVOS
+
+ FILE app.js:
+const express = require('express');
+const app = express();
+
+
+
+
+
+  FILE app.get('/', (req, res) => res.status(200).json({ message: 'Olá mundo!' }));
+module.exports = app;
+
+
+
+
+
+  FILE server.js:
+const app = require('./app');
+
+app.listen(3001, () => console.log('server running on port 3001'));
+
+
+                  E como uma requisição envia dados para o servidor?
+
+Envio por consulta, ou req.query:
+Construção: /rota?variavel1=valor&variavel1=valor&variavelN=valor
+
+
+Envio por parâmetro ou req.params:
+Construção: /rota/:variavelN
+
+
+Envio por corpo ou req.body: POST
+
+enviar dados para o servidor no método get():
+ ENVIAR = http://localhost:3001/search?name=Wlisses&age=31
+ RECUPERAR = console.log(req.query.name) / console.log(req.query.age)
+ 
+ app.post('/people', (req, res) => {
+  res.status(200).send('tasks ok!!');
+});
+
+app.use(express.text());
+
+app.post('/tasks', (req, res) => {
+  console.log('got body', req.body);
+  res.status(200).send('tasks ok!!');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

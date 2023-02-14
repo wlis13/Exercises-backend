@@ -1,0 +1,43 @@
+npm init -y
+
+npm i express
+
+npm i eslint@6.8 eslint-config-trybe-backend@1.0 -D
+
+touch .eslintignore .eslintrc.json
+
+eslintrc.json = 
+[
+  { 
+  "env": {
+    "es2020": true
+  },
+  "extends": "trybe-backend",
+  "rules": {
+    "sonarjs/no-duplicate-string": ["error", 5]
+  }
+  }
+]
+
+
+config to script in package.json:
+// package.json
+
+"start": "node src/server.js",
+"dev": "nodemon src/server.js",
+"lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
+
+app.use(express.json());
+
+
+
+
+
+
+
+
+
+
+
+
+
