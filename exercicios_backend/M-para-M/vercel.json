@@ -1,0 +1,10 @@
+{
+  "name": "muitos-para-muitos",
+  "version": 2,
+  "public": true,
+  "build": {
+    "src": "api/server.js",
+    "user": "@vercel.node"
+  },
+  "routes": [{ "src": "app.js" }]
+}
